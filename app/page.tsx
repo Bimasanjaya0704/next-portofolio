@@ -4,6 +4,7 @@ import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import { motion } from "framer-motion";
 import Stats from "@/components/Stats";
 import TechFavorite from "@/components/TechFavorite";
 
@@ -13,14 +14,25 @@ const Home = () => {
     setIsTextExpanded(!isTextExpanded);
   };
   return (
-    <section className="h-full">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: {
+          delay: 2,
+          duration: 0.4,
+          ease: "easeInOut",
+        },
+      }}
+      className="h-full"
+    >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between lg:pt-8 lg:pb-12">
           {/* Aboute me */}
           <div className="text-center lg:text-left order-2 lg:order-none">
             <h2 className="h2 text-accent mb-2">Bima Sanjaya</h2>
             <span className="h3">Software Engineer</span>
-            <p className="text-primary mt-4 dark:text-white leading-relaxed text-justify lg:mr-14 text-md md:text-lg">
+            <p className="text-primary mt-4 dark:text-white leading-relaxed text-sm text-justify lg:mr-14 text-md md:text-lg">
               I am a software engineer with one year of experience, specializing
               in frontend engineer . I have developed strong skills in creating
               responsive and engaging user interfaces and have hands-on
@@ -28,7 +40,7 @@ const Home = () => {
             </p>
 
             {/* Tech yang disukai */}
-            <div className=" text-md font-bold text-primary mt-4 dark:text-white">
+            <div className="text-sm md:text-md font-bold text-primary mt-4 dark:text-white">
               Current favorite tech :
               <TechFavorite />
             </div>
@@ -60,7 +72,7 @@ const Home = () => {
         </div>
       </div>
       <Stats />
-    </section>
+    </motion.section>
   );
 };
 

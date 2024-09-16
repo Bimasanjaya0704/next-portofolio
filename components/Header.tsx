@@ -22,12 +22,11 @@ const Header = () => {
   };
 
   const darkModeButton = (
-    <Button onClick={toggleDarkMode}>
-      {darkMode ? (
-        <MdLightMode className="text-md lg:text-xl" />
-      ) : (
-        <MdDarkMode className="text-md lg:text-xl" />
-      )}
+    <Button
+      onClick={toggleDarkMode}
+      className="text-sm lg:text-xl rounded-full p-4 h-6 md:h-[44px]"
+    >
+      {darkMode ? <MdLightMode /> : <MdDarkMode />}
     </Button>
   );
 
@@ -36,7 +35,11 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href={"/"}>
-          <Image src={darkMode ? logo : logoDark} width={150} alt="logo" />
+          <Image
+            src={darkMode ? logo : logoDark}
+            className="w-28 md:w-[150px]"
+            alt="logo"
+          />
         </Link>
 
         {/* Dekstop Nav */}
@@ -49,7 +52,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Nav */}
-        <div className="lg:hidden flex gap-4">
+        <div className="lg:hidden flex gap-2 md:gap-4">
           {darkModeButton}
           <MobileNavbar />
         </div>

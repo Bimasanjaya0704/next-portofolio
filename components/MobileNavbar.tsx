@@ -4,7 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
-import logo from "../public/assets/logo.svg";
+import logoDark from "../public/assets/logoDark.svg";
 import Image from "next/image";
 
 const links = [
@@ -42,7 +42,7 @@ const MobileNavbar = () => {
         {/* Logo */}
         <div className="mt-20 mb-16 flex justify-center">
           <Link href={"/"}>
-            <Image src={logo} width={150} alt="logo" />
+            <Image src={logoDark} width={150} alt="logo" />
           </Link>
         </div>
         {/* Nav */}
