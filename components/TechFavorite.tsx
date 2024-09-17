@@ -19,7 +19,7 @@ const techFavorite = [
 ];
 const TechFavorite = () => {
   return (
-    <div className="flex justify-center lg:justify-start items-center gap-4 text-[30px] lg:text-[36px]">
+    <div className="flex justify-center lg:justify-start items-center mt-2 gap-4 text-[30px] lg:text-[36px]">
       {techFavorite.map((item, index) => {
         return (
           <Link
