@@ -22,12 +22,32 @@ import prakalightImage from "@/public/assets/work/praka.webp";
 import wawasanImage from "@/public/assets/work/wawasan.webp";
 import rppImage from "@/public/assets/work/rpp.webp"; //
 import juraganImage from "@/public/assets/work/juragan.webp";
+import portoImage from "@/public/assets/work/porto.webp";
 import WorkSlideBtn from "@/components/WorkSlideBtn";
 import { motion } from "framer-motion";
 
 const projects = [
   {
     num: "01",
+    category: "Frontend",
+    title: "Portofolio React JS",
+    description:
+      "An interactive portfolio built with React JS and Tailwind CSS, showcasing my projects and skills in web development. Access the live demo and source code via the links below.",
+    image: portoImage,
+    live: "https://portofolio-bimasanjaya.netlify.app/",
+    github:
+      "hhttps://github.com/Bimasanjaya0704/Portofolio-Web-using-React-and-Tailwind-v3",
+    stack: [
+      {
+        name: "React Js",
+      },
+      {
+        name: "Tailwind Css",
+      },
+    ],
+  },
+  {
+    num: "02",
     category: "Fullstack",
     title: "Todolist using Laravel 10",
     description:
@@ -44,8 +64,9 @@ const projects = [
       },
     ],
   },
+
   {
-    num: "02",
+    num: "03",
     category: "Frontend",
     title: "Lesyuk",
     description:
@@ -63,7 +84,7 @@ const projects = [
     ],
   },
   {
-    num: "03",
+    num: "04",
     category: "Fullstack",
     title: "Meeting Schedular",
     description:
@@ -82,7 +103,7 @@ const projects = [
     ],
   },
   {
-    num: "04",
+    num: "05",
     category: "Fullstack",
     title: "RingkasAJA",
     description:
@@ -100,7 +121,7 @@ const projects = [
     ],
   },
   {
-    num: "05",
+    num: "06",
     category: "Mobile",
     title: "App Melati",
     description:
@@ -115,7 +136,7 @@ const projects = [
     ],
   },
   {
-    num: "06",
+    num: "07",
     category: "Frontend",
     title: "BIMovies",
     description:
@@ -134,7 +155,7 @@ const projects = [
     ],
   },
   {
-    num: "07",
+    num: "08",
     category: "Frontend",
     title: "Prakalight",
     description:
@@ -152,7 +173,7 @@ const projects = [
     ],
   },
   {
-    num: "08",
+    num: "09",
     category: "Wordpress",
     title: "Wawasan Edukasi",
     description:
@@ -170,7 +191,7 @@ const projects = [
     ],
   },
   {
-    num: "09",
+    num: "10",
     category: "Fullstack",
     title: "RPP Maker",
     description:
@@ -188,7 +209,7 @@ const projects = [
     ],
   },
   {
-    num: "10",
+    num: "11",
     category: "Frontend",
     title: "Juragan COD",
     description:

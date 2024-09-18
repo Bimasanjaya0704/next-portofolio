@@ -207,7 +207,7 @@ const About = () => {
                 <h3 className="text-2xl md:text-4xl font-bold">
                   {experience.title}
                 </h3>
-                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance  lg:text-left text-center lg:text-left lg:mx-0">
+                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance  lg:textleft text-center lg:mx-0">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -244,7 +244,7 @@ const About = () => {
                 <h3 className="text-2xl md:text-4xl font-bold">
                   {education.title}
                 </h3>
-                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance text-center lg:text-left lg:mx-0">
+                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance text-center lg:mx-0">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -280,7 +280,7 @@ const About = () => {
                   <h3 className="text-2xl md:text-4xl font-bold">
                     {skills.title}
                   </h3>
-                  <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance text-center lg:text-left lg:mx-0">
+                  <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance text-center lg:mx-0">
                     {skills.description}
                   </p>
                 </div>
@@ -329,7 +329,7 @@ const About = () => {
                 <h3 className="text-2xl md:text-4xl font-bold">
                   {about.title}
                 </h3>
-                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance text-center lg:text-left lg:mx-0">
+                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance text-center lg:mx-0">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 gap-6 w-full mx-auto lg:grid-cols-2 lg:max-w-full">
