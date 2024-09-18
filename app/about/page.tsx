@@ -1,4 +1,3 @@
-"use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Tooltip,
@@ -7,7 +6,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { motion } from "framer-motion";
 import {
   FaPython,
   FaReact,
@@ -28,6 +26,13 @@ import {
   SiNodedotjs,
   SiExpress,
 } from "react-icons/si";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Bima Sanjaya | About",
+  description:
+    "As a Software Engineer, I possess a diverse skill set that drives project success. I have been focusing on frontend development since 2020 and have been expanding my knowledge into backend technologies since 2024.",
+};
 
 // Define the type for an individual technology item
 interface TechItem {
@@ -181,18 +186,7 @@ const education = {
 
 const About = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 2,
-        transition: {
-          delay: 1.5,
-          duration: 0.4,
-          ease: "easeInOut",
-        },
-      }}
-      className="min-h-[80vw] flex items-center justify-center pb-8 md:pb-0 md:py-12 lg:py-0"
-    >
+    <div className="min-h-[80vw] flex items-center justify-center pb-8 md:pb-0 md:py-12 lg:py-0">
       <div className="container mx-auto">
         <Tabs
           defaultValue="about"
@@ -358,7 +352,7 @@ const About = () => {
           </div>
         </Tabs>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
