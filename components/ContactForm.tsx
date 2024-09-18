@@ -42,6 +42,16 @@ const ContactForm = () => {
 
       if (response.ok) {
         setAlert({ type: "success", message: "Message sent successfully!" });
+        setFormData({
+          firstname: "",
+          lastname: "",
+          email: "",
+          phone: "",
+          message: "",
+        }); // Reset form data
+
+        // Hide alert after 5 seconds
+        setTimeout(() => setAlert(null), 5000);
       } else {
         setAlert({ type: "error", message: "Failed to send message." });
       }
@@ -49,6 +59,11 @@ const ContactForm = () => {
       setAlert({ type: "error", message: "An error occurred." });
     } finally {
       setLoading(false);
+
+      // Hide error alert after 5 seconds
+      if (alert && alert.type === "error") {
+        setTimeout(() => setAlert(null), 5000);
+      }
     }
   };
 
@@ -75,12 +90,14 @@ const ContactForm = () => {
           <Input
             name="firstname"
             placeholder="Firstname"
+            value={formData.firstname}
             onChange={handleChange}
             required
           />
           <Input
             name="lastname"
             placeholder="Lastname"
+            value={formData.lastname}
             onChange={handleChange}
             required
           />
@@ -88,12 +105,14 @@ const ContactForm = () => {
             name="email"
             type="email"
             placeholder="Email"
+            value={formData.email}
             onChange={handleChange}
             required
           />
           <Input
             name="phone"
             placeholder="Phone"
+            value={formData.phone}
             onChange={handleChange}
             required
           />
@@ -103,6 +122,7 @@ const ContactForm = () => {
           name="message"
           className="h-[200px]"
           placeholder="Type your message here"
+          value={formData.message}
           onChange={handleChange}
           required
         />
