@@ -9,12 +9,6 @@ export const metadata: Metadata = {
   title: "Bima Sanjaya | Home",
 };
 const Home = () => {
-  const handleDownload = () => {
-    const fileURL =
-      "https://drive.google.com/file/d/1HN9eLWCp05gDj5vurxvJ0izAIv1BWwjM/view?usp=sharing";
-    window.open(fileURL, "_blank");
-  };
-
   return (
     <section className="h-full">
       <link rel="icon" href="/icons.ico" sizes="any" />
