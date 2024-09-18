@@ -1,7 +1,10 @@
-"use client";
-import { BsArrowDownRight } from "react-icons/bs";
-import { motion } from "framer-motion";
-import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Bima Sanjaya | Services",
+  description:
+    "If you have questions or need assistance with project planning, design, development, testing, deployment, or documentation, feel free to reach out. I'm here to help with any challenges you face and to discuss how we can work together effectively.",
+};
 
 const services = [
   {
@@ -46,18 +49,7 @@ const Services = () => {
   return (
     <section className="min-h-[40vw] flex flex-col justify-center pb-8 md:pb-0 md:py-12">
       <div className="container mx-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: {
-              delay: 2,
-              duration: 0.4,
-              ease: "easeInOut",
-            },
-          }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-[30px] md:gap-[68px]"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px] md:gap-[68px]">
           {services.map((service, index) => {
             return (
               <div
@@ -79,7 +71,7 @@ const Services = () => {
               </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
