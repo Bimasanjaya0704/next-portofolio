@@ -1,8 +1,5 @@
-import { useState } from "react";
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
-import { Button } from "@/components/ui/button";
-import { FiDownload } from "react-icons/fi";
 import Stats from "@/components/Stats";
 import TechFavorite from "@/components/TechFavorite";
 import type { Metadata } from "next";

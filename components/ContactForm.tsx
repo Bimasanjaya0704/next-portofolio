@@ -1,5 +1,4 @@
-"use client"; // This line makes this component a client component
-
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -83,7 +82,7 @@ const ContactForm = () => {
         className="flex flex-col gap-6 p-4 sm:p-10 bg-accent/15 dark:bg-[#27272c] rounded-xl"
       >
         <h3 className="text-2xl md:text-4xl text-accent font-semibold">
-          Let's work together
+          Let{"'"}s work together
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
