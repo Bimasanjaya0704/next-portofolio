@@ -1,31 +1,26 @@
-"use client";
 import { useState } from "react";
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
-import { motion } from "framer-motion";
 import Stats from "@/components/Stats";
 import TechFavorite from "@/components/TechFavorite";
+import type { Metadata } from "next";
+import ButtonDownloadCv from "@/components/ButtonDownloadCv";
 
+export const metadata: Metadata = {
+  title: "Bima Sanjaya | Home",
+};
 const Home = () => {
-  const [isTextExpanded, setIsTextExpanded] = useState(false);
-  const toggleTextExpansion = () => {
-    setIsTextExpanded(!isTextExpanded);
+  const handleDownload = () => {
+    const fileURL =
+      "https://drive.google.com/file/d/1HN9eLWCp05gDj5vurxvJ0izAIv1BWwjM/view?usp=sharing";
+    window.open(fileURL, "_blank");
   };
+
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: {
-          delay: 2,
-          duration: 0.4,
-          ease: "easeInOut",
-        },
-      }}
-      className="h-full"
-    >
+    <section className="h-full">
+      <link rel="icon" href="/icons.ico" sizes="any" />
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between lg:pt-8 lg:pb-12">
           {/* Aboute me */}
@@ -46,14 +41,8 @@ const Home = () => {
             </div>
 
             {/* Button and social media */}
-            <div className="flex mt-8 flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant={"outline"}
-                className="uppercase flex items-center gap-2 "
-              >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+            <div className="flex mt-8 flex-col lg:flex-row items-center gap-8">
+              <ButtonDownloadCv />
               <div className="mb-8 lg:mb-0">
                 <Social
                   containerStyles="flex gap-4"
@@ -72,7 +61,7 @@ const Home = () => {
         </div>
       </div>
       <Stats />
-    </motion.section>
+    </section>
   );
 };
 

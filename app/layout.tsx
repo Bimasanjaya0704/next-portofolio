@@ -13,7 +13,27 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Bima Sanjaya",
-  description: "Portofolio Bima Sanjaya",
+  description:
+    "I am a software engineer with one year of experience, specializing in frontend engineer . I have developed strong skills in creating responsive and engaging user interfaces and have hands-on experience integrating with backends through APIs.",
+  authors: {
+    name: "Bima Sanjaya",
+    url: "https://bimasanjaya.me/",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    type: "website",
+    title: "Bima Sanjaya",
+    description:
+      "I am a software engineer with one year of experience, specializing in frontend engineer . I have developed strong skills in creating responsive and engaging user interfaces and have hands-on experience integrating with backends through APIs.",
+    siteName: "Portofolio Bima Sanjaya",
+    images: [
+      {
+        url: "/photo.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
