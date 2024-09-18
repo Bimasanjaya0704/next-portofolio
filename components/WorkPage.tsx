@@ -247,7 +247,7 @@ const WorkPage = () => {
               </h2>
 
               {/* Project Description */}
-              <p className="text-primary/60 dark:text-white/60 text-justify text-sm md:text-balance">
+              <p className="text-primary/60 dark:text-white/60 text-sm md:text-balance">
                 {project.description}
               </p>
 

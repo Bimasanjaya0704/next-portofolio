@@ -102,7 +102,7 @@ const skills: Skills = {
 const about = {
   title: "About me",
   description:
-    "I am a software engineer with one year of experience, specializing in frontend engineer . I have developed strong skills in creating responsive and engaging user interfaces and have hands-on experience integrating with backends through APIs. At frontend engineer , I am proficient in JavaScript with frameworks such as Next.js and CSS frameworks like Tailwind and Bootstrap. Additionally, I have backend engineer experience with Python and C# from bootcamp and internship programs, and I can effectively implement Object-Oriented Programming (OOP) in my projects. Furthermore, I am skilled in version control with Git. I am confident that my diverse skills and experience make me a valuable asset to any team.",
+    "I am a software engineer with one year of experience, specializing in frontend engineer. I have developed strong skills in creating responsive and engaging user interfaces and have hands-on experience integrating with backends through APIs. At frontend engineer, I am proficient in JavaScript with frameworks such as Next.js and CSS frameworks like Tailwind and Bootstrap. Additionally, I have backend engineer experience with Python and C# from bootcamp and internship programs, and I can effectively implement Object-Oriented Programming (OOP) in my projects. Furthermore, I am skilled in version control with Git. I am confident that my diverse skills and experience make me a valuable asset to any team.",
   info: [
     {
       fieldName: "Name",
@@ -207,7 +207,7 @@ const About = () => {
                 <h3 className="text-2xl md:text-4xl font-bold">
                   {experience.title}
                 </h3>
-                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance text-justify lg:mx-0">
+                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance  lg:text-left text-center lg:text-left lg:mx-0">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -244,7 +244,7 @@ const About = () => {
                 <h3 className="text-2xl md:text-4xl font-bold">
                   {education.title}
                 </h3>
-                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance text-justify lg:mx-0">
+                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance text-center lg:text-left lg:mx-0">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -280,7 +280,7 @@ const About = () => {
                   <h3 className="text-2xl md:text-4xl font-bold">
                     {skills.title}
                   </h3>
-                  <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance text-justify lg:mx-0">
+                  <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance text-center lg:text-left lg:mx-0">
                     {skills.description}
                   </p>
                 </div>
@@ -329,7 +329,7 @@ const About = () => {
                 <h3 className="text-2xl md:text-4xl font-bold">
                   {about.title}
                 </h3>
-                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance text-justify lg:mx-0">
+                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance text-center lg:text-left lg:mx-0">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 gap-6 w-full mx-auto lg:grid-cols-2 lg:max-w-full">
