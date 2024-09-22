@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import ButtonDownloadCv from "@/components/ButtonDownloadCv";
 
 export const metadata: Metadata = {
-  title: "Bima Sanjaya | Home",
+  title: "Bima Sanjaya",
 };
 const Home = () => {
   return (

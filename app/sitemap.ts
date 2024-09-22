@@ -15,13 +15,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: "https://bimasanjaya.me/work",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: "https://bimasanjaya.me/services",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,
     },
     {
-      url: "https://bimasanjaya.me/work",
+      url: "https://bimasanjaya.me/contact",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,

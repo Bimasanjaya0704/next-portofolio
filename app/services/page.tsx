@@ -41,7 +41,7 @@ const services = [
     num: 6,
     title: "Documentation",
     description:
-      "We create comprehensive documentation for your project, including code documentation for developers and user guides for end-users. This ensures that both the development team and users have the necessary resources to understand and use the application effectively.",
+      "Hi! my name is Bima Sanjaya - We create comprehensive documentation for your project, including code documentation for developers and user guides for end-users. This ensures that both the development team and users have the necessary resources to understand and use the application effectively.",
   },
 ];
 

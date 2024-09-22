@@ -7,7 +7,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Bima Sanjaya | Contact",
   description:
-    "If you are interested in collaborating or have any questions, please contact me.",
+    "Hi! my name is Bima Sanjaya - If you are interested in collaborating or have any questions, please contact me.",
 };
 
 const info = [
