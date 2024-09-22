@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://www.bimasanjaya.me/photo.png",
+        alt: "Bima Sanjaya - Software Engineer",
       },
     ],
   },
