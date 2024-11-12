@@ -19,10 +19,12 @@ const Home = () => {
             <h2 className="h2 text-accent mb-2">Bima Sanjaya</h2>
             <span className="h3">Software Engineer</span>
             <p className="text-primary mt-4 dark:text-white leading-relaxed text-sm text-center lg:text-left lg:mr-14 text-md md:text-lg">
-              I am a software engineer with one year of experience, specializing
-              in frontend engineer. I have developed strong skills in creating
-              responsive and engaging user interfaces and have hands-on
-              experience integrating with backends through APIs.
+              I am a software engineer with one year of experience. As a
+              frontend engineer, I specialize in building responsive and
+              interactive user interfaces, as well as integrating with backend
+              services. My backend experience includes developing APIs, develop
+              robotic system, and applying Object-Oriented Programming (OOP)
+              principles using Python and C#.
             </p>
 
             {/* Tech yang disukai */}

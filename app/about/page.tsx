@@ -102,7 +102,7 @@ const skills: Skills = {
 const about = {
   title: "About me",
   description:
-    "I am a software engineer with one year of experience, specializing in frontend engineer. I have developed strong skills in creating responsive and engaging user interfaces and have hands-on experience integrating with backends through APIs. At frontend engineer, I am proficient in JavaScript with frameworks such as Next.js and CSS frameworks like Tailwind and Bootstrap. Additionally, I have backend engineer experience with Python and C# from bootcamp and internship programs, and I can effectively implement Object-Oriented Programming (OOP) in my projects. Furthermore, I am skilled in version control with Git. I am confident that my diverse skills and experience make me a valuable asset to any team.",
+    "I am a software engineer with one year of experience. As a frontend engineer, I specialize in building responsive and interactive user interfaces, with hands-on experience in integrating with backend services through APIs using JavaScript frameworks like Next.js and CSS frameworks like Tailwind and Bootstrap. My backend experience, gained through bootcamp, internships, and current work. Includes developing APIs, develop robotic system, and implemented Object-Oriented Programming (OOP) principles using Python and C#. Additionally, I am skilled in version control with Git, which enhances my ability to collaborate and manage project versions effectively. I am confident that my diverse skills and experience make me a valuable asset to any team.",
   info: [
     {
       fieldName: "Name",
@@ -139,8 +139,13 @@ const experience = {
   items: [
     {
       company: "Formulatrix - Salatiga",
+      position: "Junior Software Engineer",
+      duration: "Nov 2024 - Present",
+    },
+    {
+      company: "Formulatrix - Salatiga",
       position: "Intern Software Engineer",
-      duration: "Jul 2024 - Present",
+      duration: "Sep 2024 - Oct 2024",
     },
     {
       company: "Prakalight - Semarang",
