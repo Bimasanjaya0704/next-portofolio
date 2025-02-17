@@ -7,7 +7,7 @@ import { FiDownload } from "react-icons/fi";
 const ButtonDownloadCv = () => {
   const handleDownload = () => {
     const fileURL =
-      "https://drive.google.com/file/d/1FQYn6ilZawiWtSe1XFDRhPt-mF9zcLMF/view?usp=sharing";
+      "https://drive.google.com/file/d/1vX21Gfa_oUH2iJEytnMIzuHegUYc_9Cb/view?usp=sharing";
     window.open(fileURL, "_blank");
   };
 
