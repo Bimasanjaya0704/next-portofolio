@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     "Hi! my name is Bima Sanjaya - I am a software engineer with one year of experience, specializing in frontend engineer . I have developed strong skills in creating responsive and engaging user interfaces and have hands-on experience integrating with backends through APIs.",
   authors: {
     name: "Bima Sanjaya",
-    url: "https://bimasanjaya.netlify.app/",
+    url: "https://bimasanjaya.vercel.app/",
   },
   icons: {
-    icon: "https://bimasanjaya.netlify.app/favicon.ico",
+    icon: "https://bimasanjaya.vercel.app/favicon.ico",
   },
   openGraph: {
     type: "website",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Portofolio Bima Sanjaya",
     images: [
       {
-        url: "https://bimasanjaya.netlify.app/photo.png",
+        url: "https://bimasanjaya.vercel.app/photo.png",
         alt: "Bima Sanjaya - Software Engineer",
       },
     ],

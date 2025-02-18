@@ -13,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/"],
       },
     ],
-    sitemap: "https://bimasanjaya.netlify.app/sitemap.xml",
+    sitemap: "https://bimasanjaya.vercel.app/sitemap.xml",
   };
 }
