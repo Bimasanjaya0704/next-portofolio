@@ -1,6 +1,4 @@
-// app/contact/page.tsx (or wherever your Contact page is)
-
-import ContactForm from "@/components/ContactForm";
+import ContactForm from "@/app/contact/ContactForm";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 import { Metadata } from "next";
 

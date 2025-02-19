@@ -17,6 +17,8 @@ const config: Config = {
       md: "768px",
       lg: "960px",
       xl: "1200px",
+      "2xl": "1536px",
+      "3xl": "1920px",
     },
     fontFamily: {
       primary: "var(--font-jetbrainsMono)",
@@ -27,6 +29,15 @@ const config: Config = {
         accent: {
           DEFAULT: "#fdc11f",
           hover: "#e1ac1b",
+        },
+      },
+      animation: {
+        "loop-scroll": "loop-scroll 100s linear infinite",
+      },
+      keyframes: {
+        "loop-scroll": {
+          from: { transform: "translateX(-100%) " },
+          to: { transform: "translateX(0) " },
         },
       },
     },

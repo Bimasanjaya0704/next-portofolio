@@ -13,10 +13,8 @@ import {
   FaBootstrap,
   FaSourcetree,
   FaJs,
-} from "react-icons/fa";
-import { RiNextjsFill } from "react-icons/ri";
-import { TbBrandVscode } from "react-icons/tb";
-import {
+  RiNextjsFill,
+  TbBrandVscode,
   SiFlask,
   SiTailwindcss,
   SiPostman,
@@ -25,7 +23,7 @@ import {
   SiCsharp,
   SiNodedotjs,
   SiExpress,
-} from "react-icons/si";
+} from "@/components/ui/icons";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

@@ -4,6 +4,7 @@ import Stats from "@/components/Stats";
 import TechFavorite from "@/components/TechFavorite";
 import type { Metadata } from "next";
 import ButtonDownloadCv from "@/components/ButtonDownloadCv";
+import About from "@/components/About";
 
 export const metadata: Metadata = {
   title: "Bima Sanjaya",
@@ -54,6 +55,8 @@ const Home = () => {
         </div>
       </div>
       <Stats />
+
+      <About />
     </section>
   );
 };
