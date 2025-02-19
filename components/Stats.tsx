@@ -34,12 +34,12 @@ const Stats = () => {
                   end={item.num}
                   duration={5}
                   delay={2}
-                  className="text-4xl lg:text-6xl font-extrabold"
+                  className="text-4xl lg:text-6xl font-extrabold text-white dark:text-opacity-80"
                 />
                 <p
                   className={`${
                     item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
-                  } leading-snug text-primary/80 dark:text-white/80`}
+                  } leading-snug text-primary/80 dark:text-white/80 `}
                 >
                   {item.text}
                 </p>

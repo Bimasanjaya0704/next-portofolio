@@ -51,7 +51,7 @@ const careerMilestones = [
 const About = () => {
   return (
     <section>
-      <div className="bg-white border-4 py-8 md:py-24 text-primary px-4 lg:p-8 my-12 lg:mx-5 rounded-lg flex flex-col lg:flex-row items-center">
+      <div className="bg-white dark:bg-[#232329] dark:border-accent dark:text-accent dark:border-opacity-5 border-4 py-8 md:py-24 text-primary px-4 lg:p-8 my-12 lg:mx-5 rounded-lg flex flex-col lg:flex-row items-center">
         {/* Text on the left */}
         <div className="w-full lg:w-1/2 md:pr-8">
           <div className="w-full">
@@ -59,7 +59,7 @@ const About = () => {
               Career Journey
             </div>
 
-            <div className="space-y-2 md:space-y-3 mb-8">
+            <div className="space-y-2 md:space-y-3 mb-8 dark:text-primary">
               {/* Milestone 1 */}
               {careerMilestones.map((milestone, index) => (
                 <div
@@ -84,7 +84,7 @@ const About = () => {
           <div className="text-2xl md:text-3xl lg:text-5xl 2xl:text-[100px] 2xl:mb-12 font-bold text-center lg:text-right space-y-2">
             Techstack
           </div>
-          <p className="my-4 text-justify text-sm lg:text-base 2xl:text-xl">
+          <p className="my-4 text-justify text-sm lg:text-base 2xl:text-xl dark:text-white dark:text-opacity-80">
             As a Software Engineer, I possess a diverse skill set that drives
             project success. I have been focusing on frontend development since
             2020 and have been expanding my knowledge into backend technologies
@@ -96,7 +96,7 @@ const About = () => {
               {techList.concat(techList).map((service, index) => (
                 <div
                   key={index}
-                  className="flex space-x-1 md:space-x-2 px-[10px] py-[5px] md:px-4 md:py-2 bg-accent text-dark rounded-full shadow-md"
+                  className="flex space-x-1 md:space-x-2 px-[10px] py-[5px] md:px-4 md:py-2 bg-accent text-dark dark:text-primary rounded-full shadow-md"
                 >
                   <div className="flex items-center gap-2">
                     <div className="text-[12px] md:text-base">
