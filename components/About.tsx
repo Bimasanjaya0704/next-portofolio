@@ -81,10 +81,10 @@ const About = () => {
         </div>
         {/* Text on the right */}
         <div className="w-full lg:w-1/2 md:pl-8">
-          <div className="text-2xl md:text-3xl lg:text-5xl 2xl:text-[100px] 2xl:mb-12 font-bold text-center lg:text-right space-y-2">
+          <div className="text-2xl mb-4 md:mb-0 md:text-3xl lg:text-5xl 2xl:text-[100px] 2xl:mb-12 font-bold text-center lg:text-right space-y-2">
             Techstack
           </div>
-          <p className="my-4 text-justify text-sm lg:text-base 2xl:text-xl dark:text-white dark:text-opacity-80">
+          <p className="my-4 hidden md:block text-justify text-sm lg:text-base 2xl:text-xl dark:text-white dark:text-opacity-80">
             As a Software Engineer, I possess a diverse skill set that drives
             project success. I have been focusing on frontend development since
             2020 and have been expanding my knowledge into backend technologies
