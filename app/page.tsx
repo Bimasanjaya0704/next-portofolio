@@ -4,6 +4,7 @@ import Stats from "@/components/Stats";
 import TechFavorite from "@/components/TechFavorite";
 import type { Metadata } from "next";
 import ButtonDownloadCv from "@/components/ButtonDownloadCv";
+import About from "@/components/About";
 
 export const metadata: Metadata = {
   title: "Bima Sanjaya",
@@ -17,8 +18,10 @@ const Home = () => {
           {/* Aboute me */}
           <div className="text-center lg:text-left order-2 lg:order-none">
             <h2 className="h2 text-accent mb-2">Bima Sanjaya</h2>
-            <span className="h3">Software Engineer</span>
-            <p className="text-primary mt-4 dark:text-white leading-relaxed text-sm text-center lg:text-left lg:mr-14 text-md md:text-lg">
+            <span className="h3 text-white dark:text-opacity-80">
+              Software Engineer
+            </span>
+            <p className="text-primary mt-4 dark:text-white dark:text-opacity-80 leading-relaxed text-sm text-center lg:text-left lg:mr-14 text-md md:text-lg">
               I am a software engineer with one year of experience. As a
               frontend engineer, I specialize in building responsive and
               interactive user interfaces, as well as integrating with backend
@@ -28,7 +31,7 @@ const Home = () => {
             </p>
 
             {/* Tech yang disukai */}
-            <div className="text-sm md:text-md font-bold text-primary mt-4 dark:text-white">
+            <div className="text-sm md:text-md font-bold text-primary mt-4 dark:text-white dark:text-opacity-80">
               Current favorite tech :
               <TechFavorite />
             </div>
@@ -54,6 +57,8 @@ const Home = () => {
         </div>
       </div>
       <Stats />
+
+      <About />
     </section>
   );
 };

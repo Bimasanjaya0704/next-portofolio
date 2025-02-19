@@ -1,5 +1,5 @@
-import WorkPage from "@/components/WorkPage";
 import { Metadata } from "next";
+import WorkPage from "./WorkPage";
 
 export const metadata: Metadata = {
   title: "Bima Sanjaya | Work",
