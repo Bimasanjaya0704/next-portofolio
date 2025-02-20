@@ -195,7 +195,7 @@ const About = () => {
           defaultValue="about"
           className="flex flex-col lg:flex-row gap-[40px] md:gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto lg:mx-0 gap-6">
+          <TabsList className="flex flex-col w-full max-w-[380px] 2xl:max-w-[440px] mx-auto lg:mx-0 gap-6">
             <TabsTrigger value="about">About me</TabsTrigger>
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
@@ -204,13 +204,42 @@ const About = () => {
 
           {/* Content */}
           <div className="min-h-[70vw] w-full">
+            {/* about */}
+            <TabsContent
+              value="about"
+              className="w-full text-center lg:text-left"
+            >
+              <div className="flex flex-col gap-6 lg:p-0">
+                <h3 className="text-2xl md:text-4xl font-bold 2xl:text-[44px] 3xl:text-[50px]">
+                  {about.title}
+                </h3>
+                <p className="max-w-[600px] 2xl:max-w-full 2xl:text-xl text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance lg:text-left text-center lg:mx-0">
+                  {about.description}
+                </p>
+                <ul className="grid grid-cols-1 gap-6 w-full mx-auto lg:grid-cols-2 lg:max-w-full">
+                  {about.info.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex flex-col lg:flex-row items-start lg:items-center gap-4 p-4 bg-gray-100 dark:bg-[#232329] rounded-lg shadow-md"
+                    >
+                      <span className="font-semibold text-primary/60 dark:text-white/60 2xl:text-xl">
+                        {item.fieldName}:
+                      </span>
+                      <span className="text-base text-primary dark:text-white font-medium 2xl:text-xl">
+                        {item.fieldValue}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </TabsContent>
             {/* Experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center lg:text-left">
-                <h3 className="text-2xl md:text-4xl font-bold">
+                <h3 className="text-2xl md:text-4xl font-bold 2xl:text-[44px] 3xl:text-[50px]">
                   {experience.title}
                 </h3>
-                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance  lg:text-left text-center lg:mx-0">
+                <p className="max-w-[600px] 2xl:max-w-full 2xl:text-xl text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance  lg:text-left text-center lg:mx-0">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -221,16 +250,16 @@ const About = () => {
                           key={index}
                           className="bg-[#232329] h-[184px] py-6 px-4 md:px-10 rounded-lg flex flex-col justify-center items-center lg:items-start gap-1"
                         >
-                          <span className="text-accent text-sm md:text-balance">
+                          <span className="text-accent text-sm md:text-balance 2xl:text-xl">
                             {item.duration}
                           </span>
-                          <h3 className="text-balance md:text-lg text-white max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-balance md:text-lg 2xl:text-2xl 2xl:max-w-[400px] text-white max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {item.position}
                           </h3>
                           <div className="flex items-center gap-3">
                             {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-sm md:text-balance text-white/60">
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent 2xl:w-4 2xl:h-4"></span>
+                            <p className="text-sm md:text-balance text-white/60 xl:text-lg">
                               {item.company}
                             </p>
                           </div>
@@ -244,10 +273,10 @@ const About = () => {
             {/* Education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center lg:text-left">
-                <h3 className="text-2xl md:text-4xl font-bold">
+                <h3 className="text-2xl md:text-4xl font-bold  2xl:text-[44px] 3xl:text-[50px]">
                   {education.title}
                 </h3>
-                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance lg:text-left text-center lg:mx-0">
+                <p className="max-w-[600px] 2xl:max-w-full 2xl:text-xl text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance lg:text-left text-center lg:mx-0">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -256,16 +285,16 @@ const About = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-4 md:px-10 rounded-lg flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] h-[184px] py-6 2xl:text-xl px-4 md:px-10 rounded-lg flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-balance md:text-lg text-white max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-balance md:text-lg 2xl:text-2xl 2xl:max-w-[400px] text-white max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {item.degree}
                           </h3>
                           <div className="flex items-center gap-3">
                             {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-xs md:text-balance text-white/60">
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent 2xl:w-4 2xl:h-4"></span>
+                            <p className="text-sm md:text-balance text-white/60 xl:text-lg">
                               {item.institution}
                             </p>
                           </div>
@@ -280,10 +309,10 @@ const About = () => {
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col text-center lg:text-left gap-[30px]">
-                  <h3 className="text-2xl md:text-4xl font-bold">
+                  <h3 className="text-2xl md:text-4xl font-bold 2xl:text-[44px] 3xl:text-[50px]">
                     {skills.title}
                   </h3>
-                  <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance lg:text-left text-center lg:mx-0">
+                  <p className="max-w-[600px] 2xl:max-w-full 2xl:text-xl text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance lg:text-left text-center lg:mx-0">
                     {skills.description}
                   </p>
                 </div>
@@ -293,16 +322,16 @@ const About = () => {
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
                           <TooltipTrigger className="w-full bg-[#232329] h-[160px] rounded-lg flex flex-col items-center justify-center p-4">
-                            <span className="text-accent text-balance md:text-2xl font-semibold mb-12">
+                            <span className="text-accent text-balance md:text-2xl font-semibold mb-12 2xl:text-3xl">
                               {item.category}
                             </span>
-                            <div className="flex flex-wrap items-center justify-center gap-2">
+                            <div className="flex flex-wrap items-center justify-center gap-2 2xl:gap-4 3xl:gap-6">
                               {item.items.map((tech, index) => (
                                 <div
                                   key={index}
                                   className="text-white text-center"
                                 >
-                                  <div className="text-2xl md:text-4xl">
+                                  <div className="text-2xl md:text-4xl 2xl:text-[40px]">
                                     {tech.icon}
                                   </div>
                                 </div>
@@ -318,35 +347,6 @@ const About = () => {
                           </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </TabsContent>
-            {/* about */}
-            <TabsContent
-              value="about"
-              className="w-full text-center lg:text-left"
-            >
-              <div className="flex flex-col gap-6 lg:p-0">
-                <h3 className="text-2xl md:text-4xl font-bold">
-                  {about.title}
-                </h3>
-                <p className="max-w-[600px] text-primary/80 dark:text-white/60 mx-auto text-sm md:text-balance lg:text-left text-center lg:mx-0">
-                  {about.description}
-                </p>
-                <ul className="grid grid-cols-1 gap-6 w-full mx-auto lg:grid-cols-2 lg:max-w-full">
-                  {about.info.map((item, index) => (
-                    <li
-                      key={index}
-                      className="flex flex-col lg:flex-row items-start lg:items-center gap-4 p-4 bg-gray-100 dark:bg-[#232329] rounded-lg shadow-md"
-                    >
-                      <span className="font-semibold text-primary/60 dark:text-white/60">
-                        {item.fieldName}:
-                      </span>
-                      <span className="text-base text-primary dark:text-white font-medium">
-                        {item.fieldValue}
-                      </span>
                     </li>
                   ))}
                 </ul>
