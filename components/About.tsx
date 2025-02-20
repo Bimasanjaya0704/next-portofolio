@@ -54,7 +54,7 @@ const About = () => {
       <div className="bg-white dark:bg-[#232329] dark:border-accent dark:text-accent dark:border-opacity-5 border-4 py-8 md:py-24 text-primary px-4 lg:px-8 my-12 lg:mx-5 rounded-lg flex flex-col lg:flex-row items-center">
         {/* Text on the left */}
         <div className="w-full flex flex-wrap md:flex-nowrap justify-center items-center gap-8">
-          <div className="w-full lg:w-1/2">
+          <div className="w-full xl:w-1/2">
             <div className="md:text-3xl lg:text-5xl 2xl:text-[100px] 2xl:mb-12 font-bold text-center lg:text-left mb-6">
               Career Journey
             </div>
@@ -66,10 +66,10 @@ const About = () => {
                   key={index}
                   className="flex items-center w-full space-x-2 md:space-x-4 py-2 md:py-3 px-4 bg-accent rounded-xl"
                 >
-                  <div className="font-semibold text-md md:text-xl">{milestone.year}</div>
+                  <div className="font-semibold text-md md:text-xl 2xl:text-2xl">{milestone.year}</div>
                   <div className="border-l-2 border-primary h-5 2xl:border-l-4"></div>
 
-                  <div className="text-sm md:text-md font-medium">
+                  <div className="text-sm md:text-md font-medium 2xl:text-xl">
                     {milestone.title}
                   </div>
                 </div>
@@ -78,7 +78,7 @@ const About = () => {
           </div>
 
           {/* Text on the right */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full xl:w-1/2">
             <div className="text-2xl mb-6 md:mb-4 md:text-3xl lg:text-5xl 2xl:text-[100px] font-bold text-center lg:text-right">
               Techstack
             </div>
