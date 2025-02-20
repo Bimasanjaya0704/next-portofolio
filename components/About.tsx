@@ -54,7 +54,7 @@ const About = () => {
       <div className="bg-white dark:bg-[#232329] dark:border-accent dark:text-accent dark:border-opacity-5 border-4 py-8 md:py-16 text-primary px-4 lg:px-8 my-12 lg:mx-5 rounded-lg flex flex-col xl:flex-row items-center">
         {/* Text on the left */}
         <div className="w-full flex flex-wrap md:flex-nowrap justify-center items-center gap-8">
-          <div className="flex-1">
+          <div className="w-full xl:w-1/2">
             <div className="md:text-3xl lg:text-5xl 2xl:text-[100px] 2xl:mb-12 font-bold text-center lg:text-left mb-6">
               Career Journey
             </div>
@@ -78,7 +78,7 @@ const About = () => {
           </div>
 
           {/* Text on the right */}
-          <div className="flex-1">
+          <div className="w-full xl:w-1/2">
             <div className="text-2xl mb-6 md:mb-4 md:text-3xl lg:text-5xl 2xl:text-[100px] font-bold text-center lg:text-right">
               Techstack
             </div>
