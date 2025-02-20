@@ -268,7 +268,7 @@ const WorkPage = () => {
               </h2>
 
               {/* Project Description */}
-              <p className="text-primary/60 dark:text-white/60 text-sm md:text-balance">
+              <p className="text-primary/60 dark:text-white/60 text-sm md:text-balance 2xl:text-xl">
                 {project.description}
               </p>
 
@@ -278,7 +278,7 @@ const WorkPage = () => {
                   return (
                     <li
                       key={index}
-                      className="text-sm bg-accent/80 dark:bg-white/20 px-2 py-1 text-primary md:text-balance font-medium dark:text-accent"
+                      className="text-sm bg-accent/80 dark:bg-white/20 px-2 py-1 2xl:px-4 2xl:py-2 2xl:text-base text-primary md:text-balance font-medium dark:text-accent"
                     >
                       {item.name}
                       {/* remove the las coma */}
@@ -297,8 +297,8 @@ const WorkPage = () => {
                   <Link href={project.live}>
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
-                        <TooltipTrigger className="w-[34px] h-[34px] md:w-[56px] md:h-[56px] rounded-full bg-primary/20 dark:bg-[#232329] flex justify-center items-center group">
-                          <BsArrowUpRight className="text-primary dark:text-white text-md md:text-2xl group-hover:text-accent" />
+                        <TooltipTrigger className="w-[34px] h-[34px] md:w-[56px] md:h-[56px] rounded-full bg-primary/20 hover:bg-accent dark:bg-[#232329] flex justify-center items-center group">
+                          <BsArrowUpRight className="text-primary dark:text-white text-md md:text-2xl" />
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>Live Project</p>
@@ -313,8 +313,8 @@ const WorkPage = () => {
                   <Link href={project.github}>
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
-                        <TooltipTrigger className="w-[34px] h-[34px] md:w-[56px] md:h-[56px] rounded-full bg-primary/20 dark:bg-[#232329] flex justify-center items-center group">
-                          <BsGithub className="text-primary dark:text-white text-md md:text-2xl group-hover:text-accent" />
+                        <TooltipTrigger className="w-[34px] h-[34px] md:w-[56px] md:h-[56px] hover:bg-accent rounded-full bg-primary/20 dark:bg-[#232329] flex justify-center items-center group">
+                          <BsGithub className="text-primary dark:text-white text-md md:text-2xl" />
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>Github Repository</p>
@@ -357,7 +357,7 @@ const WorkPage = () => {
               {/* Slider Buttons */}
               <WorkSlideBtn
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] lg:bottom-0 z-20 w-full justify-between lg:w-max lg:justify-none"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-8 h-8 md:w-[44px] md:h-[44px] flex justify-center items-center transition-all"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-8 h-8 md:w-[44px] md:h-[44px] 2xl:text-[32px] 2xl:w-[54px] 2xl:h-[54px] flex justify-center items-center transition-all"
               />
             </Swiper>
           </div>

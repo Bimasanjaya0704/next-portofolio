@@ -18,7 +18,7 @@ const Photo = () => {
           },
         }}
       >
-        <div className="w-[230px] h-[230px] lg:h-[498px] lg:w-[498px] dark:mix-blend-lighten absolute">
+        <div className="w-[230px] h-[230px] lg:h-[498px] lg:w-[498px] 2xl:w-[630px] 2xl:h-[630px] dark:mix-blend-lighten absolute">
           <Image
             src={photo}
             priority
@@ -31,7 +31,7 @@ const Photo = () => {
 
         {/* Circle */}
         <motion.svg
-          className="w-[230px] lg:w-[498px] h-[230px] lg:h-[498px]"
+          className="w-[230px] lg:w-[498px] h-[230px] lg:h-[498px] 2xl:w-[630px] 2xl:h-[630px]"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"

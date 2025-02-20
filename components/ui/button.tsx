@@ -19,6 +19,7 @@ const buttonVariants = cva(
         sm: "h-[32px] px-4",
         md: "h-[48px] px-6",
         lg: "h-[56px] text-sm uppercase tracking-[2px] px-6",
+        "2xl": "h-[64px] px-8",
       },
     },
     defaultVariants: {

@@ -53,10 +53,10 @@ const About = () => {
     <section className="container mx-auto">
       <div className="bg-white dark:bg-[#232329] dark:border-accent dark:text-accent dark:border-opacity-5 border-4 py-8 md:py-16 text-primary px-4 lg:px-8 my-12 lg:mx-5 rounded-lg">
         <div className="w-full flex justify-between items-center">
-          <div className="md:text-3xl lg:text-5xl hidden lg:block 2xl:text-[70px] 2xl:mb-12 font-bold text-center mb-6">
+          <div className="md:text-3xl lg:text-5xl hidden lg:block 2xl:text-[60px] 2xl:mb-12 font-bold text-center mb-6">
             Career Journey
           </div>
-          <div className="md:text-3xl lg:text-5xl hidden lg:block 2xl:text-[70px] 2xl:mb-12 font-bold text-center mb-6">
+          <div className="md:text-3xl lg:text-5xl hidden lg:block 2xl:text-[60px] 2xl:mb-12 font-bold text-center mb-6">
             Techstack
           </div>
         </div>
@@ -64,7 +64,7 @@ const About = () => {
         {/* Text on the left */}
         <div className="w-full flex-none lg:flex lg:space-x-12">
           <div className="w-full lg:w-1/2">
-            <div className="text-xl md:text-3xl lg:text-5xl 2xl:text-[70px] 2xl:mb-12 font-bold text-center mb-4 lg:hidden">
+            <div className="text-xl md:text-3xl font-bold text-center mb-4 lg:hidden">
               Career Journey
             </div>
             <div className="space-y-4 dark:text-primary">
@@ -73,12 +73,12 @@ const About = () => {
                   key={index}
                   className="flex items-center w-full space-x-2 md:space-x-4 py-2 md:py-3 px-4 bg-accent rounded-xl"
                 >
-                  <div className="font-semibold text-sm md:text-2xl 2xl:text-3xl">
+                  <div className="font-semibold text-sm md:text-2xl 2xl:text-[24px]">
                     {milestone.year}
                   </div>
-                  <div className="border-l-2 border-primary h-5 2xl:border-l-4"></div>
+                  <div className="border-l-2 border-primary h-5"></div>
 
-                  <div className="text-xs md:text-lg font-medium 2xl:text-2xl">
+                  <div className="text-xs md:text-lg font-medium 2xl:text-[21px]">
                     {milestone.title}
                   </div>
                 </div>
@@ -87,11 +87,11 @@ const About = () => {
           </div>
 
           {/* Text on the right */}
-          <div className="w-full lg:w-1/2">
-            <div className="text-xl md:text-3xl lg:text-5xl 2xl:text-[70px] 2xl:mb-12 font-bold text-center lg:hidden">
+          <div className="w-full lg:w-1/2 mt-6 md:mt-0">
+            <div className="text-xl md:text-3xl font-bold text-center lg:hidden">
               Techstack
             </div>
-            <p className="hidden md:block text-justify text-sm lg:text-base 2xl:text-2xl dark:text-white dark:text-opacity-80">
+            <p className="hidden md:block text-justify text-sm lg:text-base 2xl:text-xl dark:text-white dark:text-opacity-80">
               As a Software Engineer, I possess a diverse skill set that drives
               project success. I have been focusing on frontend development
               since 2020 and have been expanding my knowledge into backend
@@ -110,7 +110,7 @@ const About = () => {
                       <div className="text-[15px] md:text-base 2xl:text-2xl">
                         {service.icon}
                       </div>
-                      <div className="text-[12px] md:text-base 2xl:text-xl">
+                      <div className="text-[12px] md:text-base 2xl:text-[16px]">
                         {service.name}
                       </div>
                     </div>
