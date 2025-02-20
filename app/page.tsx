@@ -5,6 +5,7 @@ import TechFavorite from "@/components/TechFavorite";
 import type { Metadata } from "next";
 import ButtonDownloadCv from "@/components/ButtonDownloadCv";
 import About from "@/components/About";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Bima Sanjaya",
@@ -47,7 +48,7 @@ const Home = () => {
                   iconStyles="w-9 h-9 border border-accent 
                   rounded-full flex justify-center items-center 
                   text-accent text-base hover:bg-accent 
-                  hover:text-primary hover:transition-all duration-500 2xl:text-3xl 2xl: h-14 w-14"
+                  hover:text-primary hover:transition-all duration-500 2xl:text-3xl 2xl:h-14 2xl:w-14"
                 />
               </div>
             </div>
@@ -61,6 +62,8 @@ const Home = () => {
       <Stats />
 
       <About />
+
+      <Footer />
     </section>
   );
 };
