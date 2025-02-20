@@ -24,7 +24,7 @@ const Header = () => {
   const darkModeButton = (
     <Button
       onClick={toggleDarkMode}
-      className="text-sm lg:text-xl rounded-full p-4 h-6 md:h-[44px]"
+      className="text-sm lg:text-xl 2xl:text-3xl 2xl:p-6 rounded-full p-4 h-6 md:h-[44px]"
     >
       {darkMode ? <MdLightMode /> : <MdDarkMode />}
     </Button>
@@ -37,7 +37,7 @@ const Header = () => {
         <Link href={"/"}>
           <Image
             src={darkMode ? logo : logoDark}
-            className="w-28 md:w-[150px]"
+            className="w-28 md:w-[150px] 2xl:w-[250px]"
             alt="logo"
           />
         </Link>
@@ -46,7 +46,7 @@ const Header = () => {
         <div className="hidden lg:flex items-center gap-8">
           <Navbar />
           <Link href={"/contact"}>
-            <Button>Hire me</Button>
+            <Button className="2xl:text-xl 2xl:font-bold">Hire me</Button>
           </Link>
           {darkModeButton}
         </div>
