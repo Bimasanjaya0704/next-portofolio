@@ -37,7 +37,7 @@ const Header = () => {
         <Link href={"/"}>
           <Image
             src={darkMode ? logo : logoDark}
-            className="w-28 md:w-[150px] 2xl:w-[250px]"
+            className="w-28 md:w-[150px] 2xl:w-[200px] 3xl:w-[250px]"
             alt="logo"
           />
         </Link>
