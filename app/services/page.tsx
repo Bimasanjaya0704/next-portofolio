@@ -57,14 +57,14 @@ const Services = () => {
                 className="flex-1 flex flex-col justify-center gap-4 md:gap-6 group"
               >
                 <div className="w-full cursor-grab flex justify-between items-center">
-                  <h2 className="text-[20px] md:text-[42px] font-bold leading-none text-primary dark:text-white group-hover:text-accent transition-all duration-500">
+                  <h2 className="text-[20px] md:text-[42px] 2xl:text-[46px] font-bold leading-none text-primary dark:text-white group-hover:text-accent transition-all duration-500">
                     {service.title}
                   </h2>
-                  <div className="text-3xl md:text-4xl font-extrabold text-outline dark:text-outlinedark text-transparent group-hover:text-outline-hover transition-all duration-500">
+                  <div className="text-3xl md:text-4xl 2xl:text-[44px] font-extrabold text-outline dark:text-outlinedark text-transparent group-hover:text-outline-hover transition-all duration-500">
                     {service.num}
                   </div>
                 </div>
-                <p className="text-primary/60 dark:text-white/60 text-sm md:text-balance">
+                <p className="text-primary/60 dark:text-white/60 text-sm md:text-balance  2xl:text-xl">
                   {service.description}
                 </p>
                 <div className="border-b-2 md:border-b-4 border-primary/20 dark:border-white/20 w-full"></div>
