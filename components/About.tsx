@@ -53,7 +53,7 @@ const About = () => {
     <section>
       <div className="bg-white dark:bg-[#232329] dark:border-accent dark:text-accent dark:border-opacity-5 border-4 py-8 md:py-24 text-primary px-4 lg:p-8 my-12 lg:mx-5 rounded-lg flex flex-col lg:flex-row items-center">
         {/* Text on the left */}
-        <div className="w-full flex flex-wrap md:flex-nowrap justify-center items-center gap-8">
+        <div className="w-full flex md:flex-nowrap justify-center items-center gap-8">
           <div className="w-full">
             <div className="md:text-3xl lg:text-5xl 2xl:text-[100px] 2xl:mb-12 font-bold text-center lg:text-left mb-4">
               Career Journey
