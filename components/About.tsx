@@ -51,10 +51,10 @@ const careerMilestones = [
 const About = () => {
   return (
     <section>
-      <div className="bg-white dark:bg-[#232329] dark:border-accent dark:text-accent dark:border-opacity-5 border-4 py-8 md:py-24 text-primary px-4 lg:px-8 my-12 lg:mx-5 rounded-lg flex flex-col lg:flex-row items-center">
+      <div className="bg-white dark:bg-[#232329] dark:border-accent dark:text-accent dark:border-opacity-5 border-4 py-8 md:py-16 text-primary px-4 lg:px-8 my-12 lg:mx-5 rounded-lg flex flex-col xl:flex-row items-center">
         {/* Text on the left */}
         <div className="w-full flex flex-wrap md:flex-nowrap justify-center items-center gap-8">
-          <div className="w-full xl:w-1/2">
+          <div className="flex-1">
             <div className="md:text-3xl lg:text-5xl 2xl:text-[100px] 2xl:mb-12 font-bold text-center lg:text-left mb-6">
               Career Journey
             </div>
@@ -66,10 +66,10 @@ const About = () => {
                   key={index}
                   className="flex items-center w-full space-x-2 md:space-x-4 py-2 md:py-3 px-4 bg-accent rounded-xl"
                 >
-                  <div className="font-semibold text-md md:text-xl 2xl:text-2xl">{milestone.year}</div>
+                  <div className="font-semibold text-lg md:text-2xl 2xl:text-3xl">{milestone.year}</div>
                   <div className="border-l-2 border-primary h-5 2xl:border-l-4"></div>
 
-                  <div className="text-sm md:text-md font-medium 2xl:text-xl">
+                  <div className="text-base md:text-lg font-medium 2xl:text-2xl">
                     {milestone.title}
                   </div>
                 </div>
@@ -78,12 +78,12 @@ const About = () => {
           </div>
 
           {/* Text on the right */}
-          <div className="w-full xl:w-1/2">
+          <div className="flex-1">
             <div className="text-2xl mb-6 md:mb-4 md:text-3xl lg:text-5xl 2xl:text-[100px] font-bold text-center lg:text-right">
               Techstack
             </div>
             
-            <p className="my-4 hidden md:block text-justify text-sm lg:text-base 2xl:text-xl dark:text-white dark:text-opacity-80">
+            <p className="my-4 hidden md:block text-justify text-sm lg:text-base 2xl:text-2xl dark:text-white dark:text-opacity-80">
               As a Software Engineer, I possess a diverse skill set that drives project success. I have been focusing on frontend development since 2020 and have been expanding my knowledge into backend technologies since 2024. Here are some of the technologies and tools I use:
             </p>
 
@@ -95,8 +95,8 @@ const About = () => {
                     className="flex space-x-2 px-[10px] py-[6px] md:px-6 md:py-3 bg-accent text-dark dark:text-primary rounded-full shadow-md"
                   >
                     <div className="flex items-center gap-2">
-                      <div className="text-[12px] md:text-base">{service.icon}</div>
-                      <div className="text-[12px] md:text-base">{service.name}</div>
+                      <div className="text-[12px] md:text-base 2xl:text-xl">{service.icon}</div>
+                      <div className="text-[12px] md:text-base 2xl:text-xl">{service.name}</div>
                     </div>
                   </div>
                 ))}
