@@ -13,15 +13,17 @@ const Home = () => {
   return (
     <section className="h-full">
       <link rel="icon" href="/icons.ico" sizes="any" />
-      <div className="container mx-auto">
+      <div className="container mx-auto 2xl:px-16">
         <div className="flex flex-col lg:flex-row items-center justify-between lg:pt-8 lg:pb-12">
           {/* Aboute me */}
           <div className="text-center lg:text-left order-2 lg:order-none">
-            <h2 className="h2 text-accent mb-2">Bima Sanjaya</h2>
-            <span className="h3 text-white dark:text-opacity-80">
+            <h2 className="h2 text-accent mb-2 2xl:text-[70px]">
+              Bima Sanjaya
+            </h2>
+            <span className="h3 text-white dark:text-opacity-80 2xl:text-[30px]">
               Software Engineer
             </span>
-            <p className="text-primary mt-4 dark:text-white dark:text-opacity-80 leading-relaxed text-sm text-center lg:text-left lg:mr-14 text-md md:text-lg">
+            <p className="text-primary mt-4 dark:text-white dark:text-opacity-80 leading-relaxed text-sm text-center lg:text-left lg:mr-12 3xl:mr-16 2xl:text-xl md:text-lg">
               I am a software engineer with one year of experience. As a
               frontend engineer, I specialize in building responsive and
               interactive user interfaces, as well as integrating with backend
@@ -31,7 +33,7 @@ const Home = () => {
             </p>
 
             {/* Tech yang disukai */}
-            <div className="text-sm md:text-md font-bold text-primary mt-4 dark:text-white dark:text-opacity-80">
+            <div className="text-sm md:text-md 2xl:text-xl font-bold text-primary mt-4 dark:text-white dark:text-opacity-80">
               Current favorite tech :
               <TechFavorite />
             </div>
@@ -45,7 +47,7 @@ const Home = () => {
                   iconStyles="w-9 h-9 border border-accent 
                   rounded-full flex justify-center items-center 
                   text-accent text-base hover:bg-accent 
-                  hover:text-primary hover:transition-all duration-500"
+                  hover:text-primary hover:transition-all duration-500 2xl:text-3xl 2xl: h-14 w-14"
                 />
               </div>
             </div>

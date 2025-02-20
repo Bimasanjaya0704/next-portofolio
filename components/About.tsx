@@ -87,7 +87,7 @@ const About = () => {
           </div>
 
           {/* Text on the right */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 mt-6 md:mt-0">
             <div className="text-xl md:text-3xl lg:text-5xl 2xl:text-[70px] 2xl:mb-12 font-bold text-center lg:hidden">
               Techstack
             </div>

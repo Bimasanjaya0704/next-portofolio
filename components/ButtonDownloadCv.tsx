@@ -14,11 +14,11 @@ const ButtonDownloadCv = () => {
   return (
     <Button
       variant={"outline"}
-      className="uppercase flex items-center gap-2"
+      className="uppercase flex items-center gap-2 2xl:text-xl 2xl:px-8 2xl:py-6"
       onClick={handleDownload}
     >
       <span>Download CV</span>
-      <FiDownload className="text-xl" />
+      <FiDownload className="text-xl 2xl:text-3xl" />
     </Button>
   );
 };
