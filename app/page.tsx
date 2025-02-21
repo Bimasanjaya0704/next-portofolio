@@ -21,7 +21,7 @@ const Home = () => {
             <h2 className="h2 text-accent mb-2 2xl:text-[70px]">
               Bima Sanjaya
             </h2>
-            <span className="h3 text-white dark:text-opacity-80 2xl:text-[30px]">
+            <span className="h3 text-primary dark:text-white dark:text-opacity-80 2xl:text-[30px]">
               Software Engineer
             </span>
             <p className="text-primary mt-4 dark:text-white dark:text-opacity-80 leading-relaxed text-sm text-center lg:text-left lg:mr-12 3xl:mr-16 2xl:text-xl md:text-lg">
