@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import Social from "./Social";
 import { links } from "./Navbar";
 
@@ -19,13 +20,13 @@ const Footer = () => {
           {/* Center section with dynamic navigation links */}
           <div className="flex flex-col md:flex-row gap-3 md:gap-6 mb-6 md:mb-0">
             {links.map((link, index) => (
-              <a
+              <Link
                 key={index}
                 href={link.path}
                 className="hover:text-accent-hover transition-all hover:scale-y-110 capitalize font-medium text-xs md:text-md 2xl:text-xl md:hover:scale-110"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
