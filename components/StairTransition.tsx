@@ -2,8 +2,23 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Stairs from "./Stairs";
+import { useState, useEffect } from "react";
 
 const StairTransition = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsAuthenticated(true);
+    } else {
+      setIsAuthenticated(false);
+    }
+  }, []);
+
+  if (isAuthenticated) {
+    return null;
+  }
   const pathname = usePathname();
   return (
     <>
