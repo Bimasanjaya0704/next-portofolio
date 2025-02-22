@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "./Navbar";
 import { Button } from "./ui/button";
@@ -11,6 +11,7 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -29,6 +30,19 @@ const Header = () => {
       {darkMode ? <MdLightMode /> : <MdDarkMode />}
     </Button>
   );
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsAuthenticated(true);
+    } else {
+      setIsAuthenticated(false);
+    }
+  }, []);
+
+  if (isAuthenticated) {
+    return null;
+  }
 
   return (
     <header className="py-8 xl:py-6 text-white">
