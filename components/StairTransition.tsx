@@ -16,10 +16,12 @@ const StairTransition = () => {
     }
   }, []);
 
+  const pathname = usePathname();
+
   if (isAuthenticated) {
     return null;
   }
-  const pathname = usePathname();
+
   return (
     <>
       <AnimatePresence mode="wait">
