@@ -29,7 +29,6 @@ export async function POST(req: Request) {
         { status: 401 }
       );
 
-    const userId = 1;
     const newBlog = await prisma.blog.create({
       data: { title, content, image },
     });

@@ -35,7 +35,6 @@ export async function POST(req: Request) {
       );
     }
 
-    const userId = 1;
     const newPortfolio = await prisma.portfolio.create({
       data: { title, description, imageUrl, projectUrl, liveUrl },
     });
