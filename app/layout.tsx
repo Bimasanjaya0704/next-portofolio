@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import StoreProvider from "./StoreProvider";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -44,11 +45,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={jetbrainsMono.variable}>
-        <Header />
-        <StairTransition />
-        <PageTransition>{children}</PageTransition>
-      </body>
+      <StoreProvider>
+        <body className={jetbrainsMono.variable}>
+          <Header />
+          <StairTransition />
+          <PageTransition>{children}</PageTransition>
+        </body>
+      </StoreProvider>
     </html>
   );
 }
