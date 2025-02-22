@@ -4,5 +4,5 @@ export function getToken() {
 
 export function logout() {
   localStorage.removeItem("token");
-  window.location.href = "/login";
+  window.location.href = "/dashboard/auth/login";
 }
