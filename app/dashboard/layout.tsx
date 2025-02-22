@@ -13,14 +13,30 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { RootState } from "@/lib/store";
+import { logout } from "@/utils/auth";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const { isAuthenticated, token } = useSelector(
+    (state: RootState) => state.auth
+  );
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!isAuthenticated || !token) {
+      router.push("/unauthorized");
+    }
+  }, [isAuthenticated, token, router]);
+
   const pathname = usePathname();
   const pathSegments = pathname.split("/");
 
