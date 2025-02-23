@@ -13,7 +13,7 @@ import { getBlogs } from "@/utils/api";
 import { Blog } from "@/lib/types/interface";
 import { LoadingIcon } from "@/components/loading-icon";
 
-const page = () => {
+const Page = () => {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -88,4 +88,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
