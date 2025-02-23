@@ -13,28 +13,25 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import { RootState } from "@/lib/store";
+import { getToken } from "@/utils/auth";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
 
 export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { isAuthenticated, token } = useSelector(
-    (state: RootState) => state.auth
-  );
   const router = useRouter();
+  const token = getToken();
 
   useEffect(() => {
-    if (!isAuthenticated || !token) {
+    if (!token) {
       router.push("/unauthorized");
     }
-  }, [isAuthenticated, token, router]);
+  }, [token, router]);
 
   const pathname = usePathname();
   const pathSegments = pathname.split("/");
@@ -44,9 +41,13 @@ export default function DashboardLayout({
     breadcrumbTitle = "";
   }
 
+  if (!token) {
+    return "";
+  }
+
   return (
     <SidebarProvider>
-      <div className="flex">
+      <div className="flex w-full">
         {/* Sidebar tetap */}
         <AppSidebar />
 
@@ -71,7 +72,7 @@ export default function DashboardLayout({
           </header>
 
           {/* Konten yang berubah sesuai URL */}
-          <div className="flex flex-1 flex-col gap-4 p-4 pt-0">{children}</div>
+          <div className="w-full px-5">{children}</div>
         </SidebarInset>
       </div>
     </SidebarProvider>
