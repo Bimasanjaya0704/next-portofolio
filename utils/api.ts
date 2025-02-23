@@ -41,7 +41,7 @@ export async function login(username: string, password: string) {
 // ----- BLOG -----
 export async function getBlogs() {
   try {
-    const { data } = await api.get("/blogs");
+    const { data } = await api.get("/blog");
     return data;
   } catch (error: unknown) {
     handleError(error);
@@ -56,7 +56,7 @@ export async function createBlog(
 ) {
   setAuthToken(token);
   try {
-    const { data } = await api.post("/blogs", { title, content, image });
+    const { data } = await api.post("/blog", { title, content, image });
     return data;
   } catch (error: unknown) {
     handleError(error);
@@ -72,7 +72,7 @@ export async function updateBlog(
 ) {
   setAuthToken(token);
   try {
-    const { data } = await api.put(`/blogs/${blogId}`, {
+    const { data } = await api.put(`/blog/${blogId}`, {
       title,
       content,
       image,
@@ -86,7 +86,7 @@ export async function updateBlog(
 // ----- PORTFOLIO -----
 export async function getPortfolio() {
   try {
-    const { data } = await api.get("/portfolio");
+    const { data } = await api.get("/portofolio");
     return data;
   } catch (error: unknown) {
     handleError(error);
@@ -101,7 +101,7 @@ export async function createPortfolio(
 ) {
   setAuthToken(token);
   try {
-    const { data } = await api.post("/portfolio", {
+    const { data } = await api.post("/portofolio", {
       title,
       description,
       image,
@@ -121,7 +121,7 @@ export async function updatePortfolio(
 ) {
   setAuthToken(token);
   try {
-    const { data } = await api.put(`/portfolio/${portfolioId}`, {
+    const { data } = await api.put(`/portofolio/${portfolioId}`, {
       title,
       description,
       image,
