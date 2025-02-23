@@ -49,7 +49,7 @@ export default function LoginPage() {
             placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="w-full mb-3 bg-primary dark:border-accent"
+            className="w-full mb-3 border-accent"
             required
           />
           <Input
@@ -57,7 +57,7 @@ export default function LoginPage() {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full mb-3 bg-primary dark:border-accent"
+            className="w-full mb-3 border-accent"
             required
           />
 
