@@ -1,7 +1,6 @@
 "use client";
 
-import { ChevronRight, type LucideIcon } from "lucide-react";
-
+import { type LucideIcon } from "lucide-react";
 import {
   Collapsible,
   CollapsibleContent,
@@ -13,9 +12,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 
@@ -27,10 +23,6 @@ export function NavMain({
     url: string;
     icon?: LucideIcon;
     isActive?: boolean;
-    items?: {
-      title: string;
-      url: string;
-    }[];
   }[];
 }) {
   return (
@@ -44,31 +36,14 @@ export function NavMain({
             defaultOpen={item.isActive}
             className="group/collapsible"
           >
-            <SidebarMenuItem>
-              <CollapsibleTrigger asChild>
-                <SidebarMenuButton tooltip={item.title}>
+            <Link href={item.url}>
+              <SidebarMenuItem>
+                <SidebarMenuButton>
                   {item.icon && <item.icon />}
-
-                  <Link href={item.url}>
-                    <span>{item.title}</span>
-                  </Link>
-                  <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                  <span>{item.title}</span>
                 </SidebarMenuButton>
-              </CollapsibleTrigger>
-              <CollapsibleContent>
-                <SidebarMenuSub>
-                  {item.items?.map((subItem) => (
-                    <SidebarMenuSubItem key={subItem.title}>
-                      <SidebarMenuSubButton asChild>
-                        <Link href={subItem.url}>
-                          <span>{subItem.title}</span>
-                        </Link>
-                      </SidebarMenuSubButton>
-                    </SidebarMenuSubItem>
-                  ))}
-                </SidebarMenuSub>
-              </CollapsibleContent>
-            </SidebarMenuItem>
+              </SidebarMenuItem>
+            </Link>
           </Collapsible>
         ))}
       </SidebarMenu>

@@ -27,50 +27,16 @@ const data = {
       url: "/dashboard/blog",
       icon: SquareTerminal,
       isActive: true,
-      items: [
-        {
-          title: "Create Blog",
-          url: "#",
-        },
-        {
-          title: "Update Blog",
-          url: "#",
-        },
-        {
-          title: "Delete Blog",
-          url: "#",
-        },
-      ],
     },
     {
       title: "Portofolio",
       url: "/dashboard/portofolio",
       icon: Bot,
-      items: [
-        {
-          title: "Create Portofolio",
-          url: "#",
-        },
-        {
-          title: "Update Portofolio",
-          url: "#",
-        },
-        {
-          title: "Delete Portofolio",
-          url: "#",
-        },
-      ],
     },
     {
       title: "Contact",
       url: "/dashboard/contact",
       icon: BookOpen,
-      items: [
-        {
-          title: "Get Messege",
-          url: "#",
-        },
-      ],
     },
   ],
 };
