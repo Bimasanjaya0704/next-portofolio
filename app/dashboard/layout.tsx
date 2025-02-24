@@ -13,29 +13,33 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import { getToken } from "@/utils/auth";
+import { RootState } from "@/lib/store";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const { isAuthenticated, token } = useSelector(
+    (state: RootState) => state.auth
+  );
+
   const router = useRouter();
   const [isMounted, setIsMounted] = useState(false);
-  const token = getToken();
   const pathname = usePathname();
 
   useEffect(() => {
-    if (!token) {
+    if (!token && !isAuthenticated) {
       router.push("/unauthorized");
     }
     setIsMounted(true);
-  }, [token, router]);
+  }, [token, isAuthenticated, router]);
 
-  if (!isMounted) return null;
+  if (!isMounted) return "";
 
   const pathSegments = pathname.split("/");
   let breadcrumbTitle = pathSegments[pathSegments.length - 1];
