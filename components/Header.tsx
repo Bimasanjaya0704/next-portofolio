@@ -35,7 +35,6 @@ const Header = () => {
     const token = localStorage.getItem("token");
     if (token) {
       setIsAuthenticated(true);
-      window.location.reload();
     } else {
       setIsAuthenticated(false);
     }

@@ -20,9 +20,10 @@ export const metadata: Metadata = {
     name: "Bima Sanjaya",
     url: "https://bimasanjaya.vercel.app/",
   },
-  icons: {
-    icon: "https://bimasanjaya.vercel.app/favicon.ico",
-  },
+  icon: [
+    { url: "https://bimasanjaya.vercel.app/favicon.ico", type: "image/x-icon" },
+    { url: "https://bimasanjaya.vercel.app/favicon.png", type: "image/png" },
+  ],
   openGraph: {
     type: "website",
     title: "Bima Sanjaya",
