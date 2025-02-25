@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     name: "Bima Sanjaya",
     url: "https://bimasanjaya.vercel.app/",
   },
-  icon: [
+  icons: [
     { url: "https://bimasanjaya.vercel.app/favicon.ico", type: "image/x-icon" },
     { url: "https://bimasanjaya.vercel.app/favicon.png", type: "image/png" },
   ],
