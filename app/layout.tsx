@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Portofolio Bima Sanjaya",
     images: [
       {
-        url: "https://bimasanjaya.vercel.app/photo.png",
+        url: "https://bimasanjaya.vercel.app/bimas.png",
         alt: "Bima Sanjaya - Software Engineer",
       },
     ],
