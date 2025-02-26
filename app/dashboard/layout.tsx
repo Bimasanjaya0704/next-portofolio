@@ -1,5 +1,6 @@
 "use client";
 import { AppSidebar } from "@/components/dashboard/app-sidebar";
+import { LoadingIcon } from "@/components/loading-icon";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -35,11 +36,11 @@ export default function DashboardLayout({
   useEffect(() => {
     if (!token && !isAuthenticated) {
       router.push("/unauthorized");
+      setIsMounted(true);
     }
-    setIsMounted(true);
   }, [token, isAuthenticated, router]);
 
-  if (!isMounted) return "";
+  if (isMounted) return <LoadingIcon />;
 
   const pathSegments = pathname.split("/");
   let breadcrumbTitle = pathSegments[pathSegments.length - 1];

@@ -1,4 +1,13 @@
 "use client";
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogClose,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 import { BadgeCheck, ChevronsUpDown, LogOut } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -18,6 +27,8 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
+import { Button } from "../ui/button";
+import { handleLogout } from "@/utils/auth";
 
 export function NavUser({
   user,
@@ -75,10 +86,36 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <LogOut />
-              Log out
-            </DropdownMenuItem>
+            <Dialog>
+              <DialogTrigger>
+                <div className="flex items-center gap-2 text-sm px-2 py-1 hover:bg-slate-100 transition-all w-[228px]">
+                  <LogOut className="w-[16px]" />
+                  Log out
+                </div>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Are you sure to Logout?</DialogTitle>
+                </DialogHeader>
+                <DialogFooter className="sm:justify-start">
+                  <Button
+                    className="text-white hover:bg-accent"
+                    onClick={handleLogout}
+                  >
+                    Yes
+                  </Button>
+                  <DialogClose asChild>
+                    <Button
+                      type="button"
+                      variant="destructive"
+                      className="hover:scale-105"
+                    >
+                      Cancel
+                    </Button>
+                  </DialogClose>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
           </DropdownMenuContent>
         </DropdownMenu>
       </SidebarMenuItem>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Navbar from "./Navbar";
 import { Button } from "./ui/button";
@@ -8,10 +8,12 @@ import Image from "next/image";
 import logo from "../public/assets/logo.svg";
 import logoDark from "../public/assets/logoDark.svg";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const pathname = usePathname();
+  const isDashboard = pathname.includes("/dashboard");
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -31,16 +33,7 @@ const Header = () => {
     </Button>
   );
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      setIsAuthenticated(true);
-    } else {
-      setIsAuthenticated(false);
-    }
-  }, []);
-
-  if (isAuthenticated) {
+  if (isDashboard) {
     return null;
   }
 

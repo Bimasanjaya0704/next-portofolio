@@ -5,7 +5,7 @@ export const getToken = (): string | null => {
   return null;
 };
 
-export function logout() {
+export function handleLogout() {
   localStorage.removeItem("token");
   window.location.href = "/auth/login";
 }
