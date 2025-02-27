@@ -1,14 +1,30 @@
+import Link from "next/link";
+import imageUnauthorized from "@/public/Unauthorized.svg";
+import Image from "next/image";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+
 export default function UnauthorizedPage() {
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="w-full max-w-md p-6 md:p-10 2xl:p-14 bg-white dark:bg-[#232329] rounded-lg shadow-md">
-        <h2 className="md:text-xl 2xl:text-2xl font-bold text-center text-accent">
-          Anda Tidak Terautentikasi
-        </h2>
-        <p className="text-center mt-4 text-sm md:text-base 2xl:text-lg">
-          Anda perlu login untuk mengakses halaman ini.
-        </p>
+    <>
+      <div className="container lg:p-10 bg-white flex flex-col md:flex-row items-center justify-around text-center md:text-left ">
+        <div className="order-2 md:order-none">
+          <h1 className="text-lg lg:text-5xl font-black text-yellow-500 uppercase mb-4 md:mb-10">
+            You seem to be lost!
+          </h1>
+          <p className="text-gray-600 text-sm md:text-base">
+            The page youre looking for isnt available. Try searching again or
+            use the Go Back button below.
+          </p>
+          <Link href="/">
+            <Button className="text-white mt-4 mb-8">&larr; Go Back</Button>
+          </Link>
+        </div>
+        <div className="text-right order-1 md:order-none">
+          <Image src={imageUnauthorized} alt="unaothorized" />
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
