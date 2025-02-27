@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import StoreProvider from "./StoreProvider";
+import Head from "next/head";  // Import Head from next/head
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -54,6 +55,39 @@ export default function RootLayout({
           <Header />
           <StairTransition />
           <PageTransition>{children}</PageTransition>
+
+          {/* Menambahkan Meta Tag secara manual di dalam Head */}
+          <Head>
+            {/* General Meta Tags */}
+            <meta name="description" content="Hi! my name is Bima Sanjaya..." />
+            <meta name="author" content="Bima Sanjaya" />
+            <meta name="keywords" content="Bima Sanjaya, Software Engineer, Frontend Engineer, Web Development" />
+
+            {/* Open Graph Meta Tags */}
+            <meta property="og:title" content="Bima Sanjaya" />
+            <meta property="og:description" content="Hi! my name is Bima Sanjaya - I am a software engineer..." />
+            <meta property="og:image" content="https://bimasanjaya.vercel.app/bimas.png" />
+            <meta property="og:image:alt" content="Bima Sanjaya - Software Engineer" />
+            <meta property="og:image:type" content="image/png" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:site_name" content="Portofolio Bima Sanjaya" />
+            <meta property="og:type" content="website" />
+
+            {/* Twitter Card Meta Tags */}
+            <meta name="twitter:title" content="Bima Sanjaya" />
+            <meta name="twitter:description" content="Hi! my name is Bima Sanjaya - I am a software engineer..." />
+            <meta name="twitter:image" content="https://bimasanjaya.vercel.app/bimas.png" />
+            <meta name="twitter:image:alt" content="Bima Sanjaya - Software Engineer" />
+            <meta name="twitter:card" content="summary_large_image" />
+
+            {/* Favicon */}
+            <link rel="icon" href="https://bimasanjaya.vercel.app/favicon.ico" type="image/x-icon" />
+            <link rel="icon" href="https://bimasanjaya.vercel.app/favicon.png" type="image/png" />
+
+            {/* Apple Touch Icon */}
+            <link rel="apple-touch-icon" href="https://bimasanjaya.vercel.app/apple-touch-icon.png" />
+          </Head>
         </body>
       </StoreProvider>
     </html>
