@@ -1,33 +1,33 @@
 import jwt from "jsonwebtoken";
 
 const SECRET_KEY =
-  process.env.JWT_SECRET || "AComplexKey1234567890@!#$%^&*()_+"; // Pastikan menggunakan ENV variable untuk keamanan
+  process.env.JWT_SECRET || "AComplexKey1234567890@!#$%^&*()_+"; // Gunakan ENV variable untuk keamanan
 
-export function verifyToken(token: string | undefined): boolean {
+export function verifyToken(token: string | undefined): { id: number } | null {
   if (!token) {
     console.error("Token is missing");
-    return false; // Token tidak ada
+    return null; // Token tidak ada
   }
 
   try {
     // Verifikasi token menggunakan secret key yang sama
-    const decoded = jwt.verify(token, SECRET_KEY);
+    const decoded = jwt.verify(token, SECRET_KEY) as { id: number };
 
-    if (!decoded) {
-      console.error("Token is invalid or corrupted");
-      return false; // Jika decode gagal
+    if (!decoded || !decoded.id) {
+      console.error("Token is invalid or missing user ID");
+      return null; // Jika decode gagal atau tidak ada ID
     }
 
-    return true; // Token valid
+    return decoded; // Token valid, kembalikan ID user
   } catch (error) {
     if (error instanceof jwt.TokenExpiredError) {
-      console.error("Token has expired"); // Menangani kasus token kedaluwarsa
+      console.error("Token has expired");
     } else if (error instanceof jwt.JsonWebTokenError) {
-      console.error("Token is invalid"); // Token tidak valid
+      console.error("Token is invalid");
     } else {
       console.error("Unknown JWT error", error);
     }
 
-    return false; // Token tidak valid atau error lainnya
+    return null; // Token tidak valid atau error lainnya
   }
 }

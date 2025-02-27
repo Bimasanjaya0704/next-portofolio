@@ -8,6 +8,18 @@ export interface User {
   updatedAt: string;
 }
 
+export interface UserProfile {
+  id: number;
+  username: string;
+  createdAt: string;
+}
+
+export interface UserUpdate {
+  username?: string;
+  oldPassword?: string;
+  newPassword?: string;
+}
+
 export interface Blog {
   id: number;
   title: string;

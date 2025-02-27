@@ -1,3 +1,4 @@
+import { UserUpdate } from "@/lib/types/interface";
 import axios from "axios";
 
 const API_BASE_URL = "https://bimasanjaya.vercel.app/api";
@@ -32,6 +33,34 @@ function handleError(error: unknown): never {
 export async function login(username: string, password: string) {
   try {
     const { data } = await api.post("/auth/login", { username, password });
+    return data;
+  } catch (error: unknown) {
+    handleError(error);
+  }
+}
+
+// ----- User -----
+export async function getUser() {
+  try {
+    const { data } = await api.get("/user");
+    return data;
+  } catch (error: unknown) {
+    handleError(error);
+  }
+}
+
+export async function updateUser(userId: number, updatedData: UserUpdate) {
+  try {
+    const { data } = await api.patch(`/user/${userId}`, updatedData);
+    return data;
+  } catch (error: unknown) {
+    handleError(error);
+  }
+}
+
+export async function updateUserByPut(userId: number, updatedData: UserUpdate) {
+  try {
+    const { data } = await api.put(`/user/${userId}`, updatedData);
     return data;
   } catch (error: unknown) {
     handleError(error);

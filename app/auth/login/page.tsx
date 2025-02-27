@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { login } from "@/utils/api";
+import { login, setAuthToken } from "@/utils/api";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useDispatch } from "react-redux";
@@ -25,6 +25,7 @@ export default function LoginPage() {
       const data = await login(username, password);
       localStorage.setItem("token", data.token);
       dispatch(setToken(data.token));
+      setAuthToken(data.token);
       router.push("/dashboard");
     } catch (err) {
       if (err instanceof Error) {
