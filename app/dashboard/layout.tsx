@@ -14,11 +14,13 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { setToken } from "@/lib/slices/authSlice";
 import { RootState } from "@/lib/store";
+import { getToken } from "@/utils/auth";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function DashboardLayout({
   children,
@@ -32,13 +34,20 @@ export default function DashboardLayout({
   const router = useRouter();
   const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
+  const dispatch = useDispatch();
 
   useEffect(() => {
+    const token = getToken();
+
+    if (token) {
+      dispatch(setToken(token));
+    }
+
     if (!token && !isAuthenticated) {
       router.push("/unauthorized");
       setIsMounted(true);
     }
-  }, [token, isAuthenticated, router]);
+  }, [token, isAuthenticated, router, dispatch]);
 
   if (isMounted) return <LoadingIcon />;
 

@@ -2,11 +2,10 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { login, setAuthToken } from "@/utils/api";
+import { login } from "@/utils/api";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useDispatch } from "react-redux";
-import { setToken } from "@/lib/slices/authSlice";
+import { setTokenAuth } from "@/utils/auth";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -14,7 +13,6 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const dispatch = useDispatch();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,9 +21,7 @@ export default function LoginPage() {
 
     try {
       const data = await login(username, password);
-      localStorage.setItem("token", data.token);
-      dispatch(setToken(data.token));
-      setAuthToken(data.token);
+      setTokenAuth(data.token);
       router.push("/dashboard");
     } catch (err) {
       if (err instanceof Error) {
