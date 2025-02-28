@@ -33,7 +33,14 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: Request) {
   try {
-    const { title, content, image, token } = await req.json();
+    const token = req.headers.get("Authorization")?.replace("Bearer ", "");
+    console.log("Authorization Header:", token);
+    if (!token)
+      return NextResponse.json(
+        { success: false, message: "Unauthorized: No token provided" },
+        { status: 401 }
+      );
+
     const isAdmin = verifyToken(token);
     if (!isAdmin)
       return NextResponse.json(
@@ -41,12 +48,14 @@ export async function POST(req: Request) {
         { status: 401 }
       );
 
+    const { title, content, image } = await req.json();
     const newBlog = await prisma.blog.create({
       data: { title, content, image },
     });
 
     return NextResponse.json({ success: true, data: newBlog }, { status: 201 });
   } catch (error) {
+    console.error("Error:", error);
     return NextResponse.json(
       { success: false, message: "Internal Server Error" },
       { status: 500 }

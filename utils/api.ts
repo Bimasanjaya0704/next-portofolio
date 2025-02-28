@@ -85,7 +85,15 @@ export async function createBlog(
 ) {
   setAuthToken(token);
   try {
-    const { data } = await api.post("/blog", { title, content, image, token });
+    const { data } = await api.post(
+      "/blog",
+      { title, content, image },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
     return data;
   } catch (error: unknown) {
     handleError(error);
@@ -101,12 +109,15 @@ export async function updateBlog(
 ) {
   setAuthToken(token);
   try {
-    const { data } = await api.put(`/blog/${blogId}`, {
-      title,
-      content,
-      image,
-      token,
-    });
+    const { data } = await api.put(
+      `/blog/${blogId}`,
+      { title, content, image },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
     return data;
   } catch (error: unknown) {
     handleError(error);

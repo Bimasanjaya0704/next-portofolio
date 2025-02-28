@@ -34,17 +34,33 @@ export async function PUT(
   { params }: { params: { id: string } }
 ) {
   try {
-    const { title, content, image, token } = await req.json();
+    const authHeader = req.headers.get("Authorization");
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      return NextResponse.json(
+        { success: false, message: "Unauthorized: No token provided" },
+        { status: 401 }
+      );
+    }
+    const token = authHeader.replace("Bearer ", "");
     const isAdmin = verifyToken(token);
     if (!isAdmin) {
       return NextResponse.json(
-        { success: false, message: "Unauthorized" },
+        { success: false, message: "Unauthorized: Invalid token" },
         { status: 401 }
       );
     }
 
+    const blogId = Number(params.id);
+    if (isNaN(blogId)) {
+      return NextResponse.json(
+        { success: false, message: "Invalid blog ID" },
+        { status: 400 }
+      );
+    }
+    const { title, content, image } = await req.json();
+
     const updatedBlog = await prisma.blog.update({
-      where: { id: Number(params.id) },
+      where: { id: blogId },
       data: { title, content, image, updatedAt: new Date() },
     });
 
@@ -53,6 +69,7 @@ export async function PUT(
       { status: 200 }
     );
   } catch (error) {
+    console.error("Error updating blog:", error);
     return NextResponse.json(
       { success: false, message: "Internal Server Error" },
       { status: 500 }
@@ -65,23 +82,36 @@ export async function DELETE(
   { params }: { params: { id: string } }
 ) {
   try {
-    const token = req.headers.get("Authorization")?.replace("Bearer ", "");
-    const isAdmin = verifyToken(token);
+    const authHeader = req.headers.get("Authorization");
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      return NextResponse.json(
+        { success: false, message: "Unauthorized: No token provided" },
+        { status: 401 }
+      );
+    }
+    const token = authHeader.replace("Bearer ", "");
 
+    const isAdmin = verifyToken(token);
     if (!isAdmin) {
       return NextResponse.json(
-        { success: false, message: "Unauthorized" },
+        { success: false, message: "Unauthorized: Invalid token" },
         { status: 401 }
       );
     }
 
-    await prisma.blog.delete({
-      where: { id: Number(params.id) },
-    });
+    const blogId = Number(params.id);
+    if (isNaN(blogId)) {
+      return NextResponse.json(
+        { success: false, message: "Invalid blog ID" },
+        { status: 400 }
+      );
+    }
+
+    await prisma.blog.delete({ where: { id: blogId } });
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
-    console.log("Error deleting blog:", error);
+    console.error("Error deleting blog:", error);
     return NextResponse.json(
       { success: false, message: "Internal Server Error" },
       { status: 500 }
