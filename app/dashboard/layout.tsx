@@ -61,10 +61,10 @@ export default function DashboardLayout({
   return (
     <SidebarProvider>
       <div className="flex w-full">
-        {/* Sidebar tetap */}
+        {/* Sidebar */}
         <AppSidebar />
 
-        {/* Konten utama */}
+        {/* Main Content */}
         <SidebarInset className="flex-1">
           <header className="flex h-16 items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
@@ -82,7 +82,7 @@ export default function DashboardLayout({
             </Breadcrumb>
           </header>
 
-          {/* Konten yang berubah sesuai URL */}
+          {/* Dynamic Content */}
           <div className="w-full px-5">{children}</div>
         </SidebarInset>
       </div>
