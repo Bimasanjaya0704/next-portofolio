@@ -1,16 +1,28 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
 import { verifyToken } from "@/utils/authMiddleware";
 
 const prisma = new PrismaClient();
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
+    const { searchParams } = new URL(req.url);
+    const page = Number(searchParams.get("page")) || 1;
+    const limit = Number(searchParams.get("limit")) || 10;
+    const skip = (page - 1) * limit;
+
     const blogs = await prisma.blog.findMany({
+      take: limit,
+      skip: skip,
       orderBy: { createdAt: "desc" },
     });
 
-    return NextResponse.json({ success: true, data: blogs }, { status: 200 });
+    const totalBlogs = await prisma.blog.count();
+
+    return NextResponse.json(
+      { success: true, data: blogs, total: totalBlogs, page, limit },
+      { status: 200 }
+    );
   } catch (error) {
     return NextResponse.json(
       { success: false, message: "Internal Server Error" },

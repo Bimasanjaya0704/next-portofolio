@@ -32,7 +32,7 @@ const config: Config = {
         primary: "#1c1c22",
         accent: {
           DEFAULT: "#fdc11f",
-          hover: "#e1ac1b",
+          hover: "#ffcb2d",
         },
         second: {
           DEFAULT: "#232329",

@@ -65,8 +65,9 @@ export async function DELETE(
   { params }: { params: { id: string } }
 ) {
   try {
-    const { token } = await req.json();
+    const token = req.headers.get("Authorization")?.replace("Bearer ", "");
     const isAdmin = verifyToken(token);
+
     if (!isAdmin) {
       return NextResponse.json(
         { success: false, message: "Unauthorized" },
@@ -80,6 +81,7 @@ export async function DELETE(
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
+    console.log("Error deleting blog:", error);
     return NextResponse.json(
       { success: false, message: "Internal Server Error" },
       { status: 500 }

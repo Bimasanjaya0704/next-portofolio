@@ -12,7 +12,7 @@ const buttonVariants = cva(
         default:
           "bg-accent text-slate-50 hover:bg-accent-hover text-primary hover:scale-105",
         destructive:
-          "bg-red-500 text-slate-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/90",
+          "bg-red-500 text-slate-50 hover:scale-105 hover:bg-red-500/90 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/90",
         outline:
           "border border-accent text-accent hover:scale-105 dark:text-accent dark:hover:text-primary dark:hover:bg-accent hover:bg-accent hover:text-white",
         secondary:

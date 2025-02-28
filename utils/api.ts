@@ -68,9 +68,9 @@ export async function updateUserByPut(userId: number, updatedData: UserUpdate) {
 }
 
 // ----- BLOG -----
-export async function getBlogs() {
+export async function getBlogs(page = 1, limit = 10) {
   try {
-    const { data } = await api.get("/blog");
+    const { data } = await api.get(`/blog?page=${page}&limit=${limit}`);
     return data;
   } catch (error: unknown) {
     handleError(error);
@@ -85,7 +85,7 @@ export async function createBlog(
 ) {
   setAuthToken(token);
   try {
-    const { data } = await api.post("/blog", { title, content, image });
+    const { data } = await api.post("/blog", { title, content, image, token });
     return data;
   } catch (error: unknown) {
     handleError(error);
@@ -105,6 +105,21 @@ export async function updateBlog(
       title,
       content,
       image,
+      token,
+    });
+    return data;
+  } catch (error: unknown) {
+    handleError(error);
+  }
+}
+
+export async function deleteBlog(blogId: number, token: string) {
+  setAuthToken(token);
+  try {
+    const { data } = await api.delete(`/blog/${blogId}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     });
     return data;
   } catch (error: unknown) {
