@@ -43,7 +43,7 @@ const MobileNavbar = () => {
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         {/* Logo */}
-        <div className="mt-20 mb-16 flex justify-center">
+        <div className="mt-8 mb-4 flex justify-center">
           <Link href={"/"}>
             <Image src={logoDark} width={150} alt="logo" />
           </Link>

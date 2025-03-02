@@ -28,8 +28,8 @@ const BlogItem: React.FC<{ blog: BlogData }> = ({ blog }) => {
 
         {/* Content Preview */}
         <p className="text-[12px] md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-          {blog.content.length > 180
-            ? blog.content.substring(0, 180) + "..."
+          {blog.content.length > 240
+            ? blog.content.substring(0, 240) + "..."
             : blog.content}
         </p>
 
