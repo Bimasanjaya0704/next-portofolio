@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 const Home = () => {
   return (
-    <section className="h-full">
+    <section className="h-full mt-8 md:mt-0">
       <link rel="icon" href="/icons.ico" sizes="any" />
       <div className="container mx-auto 2xl:px-16">
         <div className="flex flex-col lg:flex-row items-center justify-between lg:pt-8 lg:pb-12">
