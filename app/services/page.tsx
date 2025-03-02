@@ -47,7 +47,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="min-h-[40vw] flex flex-col justify-center pb-8 md:pb-0 md:py-12">
+    <section className="min-h-[40vw] flex flex-col justify-center mt-8 md:mt-0 pb-8 md:pb-0 md:py-12">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px] md:gap-[68px]">
           {services.map((service, index) => {

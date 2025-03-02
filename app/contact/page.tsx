@@ -29,7 +29,7 @@ const info = [
 const Contact = () => {
   return (
     <section>
-      <div className="container mx-auto pb-12 2xl:px-32">
+      <div className="container mx-auto pb-12 mt-8 md:mt-0 2xl:px-32">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* Form */}
           <div className="lg:w-full order-2 lg:order-none">

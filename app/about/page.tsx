@@ -189,7 +189,7 @@ const education = {
 
 const About = () => {
   return (
-    <div className="min-h-[80vw] flex items-center justify-center pb-8 md:pb-0 md:py-12 lg:py-0">
+    <div className="min-h-[80vw] flex items-center justify-center mt-8 md:mt-0 pb-8 md:pb-0 md:py-12 lg:py-0">
       <div className="container mx-auto">
         <Tabs
           defaultValue="about"

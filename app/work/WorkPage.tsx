@@ -246,7 +246,7 @@ const WorkPage = () => {
           ease: "easeInOut",
         },
       }}
-      className="flex flex-col justify-center md:py-12 lg:pb-32"
+      className="flex flex-col justify-center md:py-12 lg:pb-32 mt-8 md:mt-0"
     >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row lg:gap-[30px]">

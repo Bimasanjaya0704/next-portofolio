@@ -38,7 +38,7 @@ const Header = () => {
   }
 
   return (
-    <header className="py-8 xl:py-6 text-white">
+    <header className="pt-2 xl:py-6 text-white">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href={"/"}>

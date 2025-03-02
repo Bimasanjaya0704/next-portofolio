@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export default function UnauthorizedPage() {
   return (
     <>
-      <div className="container lg:p-10 bg-white flex flex-col md:flex-row items-center justify-around text-center md:text-left ">
+      <div className="container lg:p-10 bg-white flex flex-col mt-4 md:mt-0 md:flex-row items-center justify-around text-center md:text-left ">
         <div className="order-2 md:order-none">
           <h1 className="text-lg lg:text-5xl 2xl:text-[70px] font-black text-yellow-500 uppercase mb-4 md:mb-10">
             You seem to be lost!
