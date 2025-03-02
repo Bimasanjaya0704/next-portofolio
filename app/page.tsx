@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import ButtonDownloadCv from "@/components/ButtonDownloadCv";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
+import BlogLanding from "@/components/BlogLanding/BlogLanding";
 
 export const metadata: Metadata = {
   title: "Bima Sanjaya",
@@ -62,6 +63,8 @@ const Home = () => {
       <Stats />
 
       <About />
+
+      <BlogLanding />
 
       <Footer />
     </section>
