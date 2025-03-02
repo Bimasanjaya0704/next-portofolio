@@ -20,6 +20,10 @@ export const links = [
     path: "/work",
   },
   {
+    name: "blog",
+    path: "/blog",
+  },
+  {
     name: "contact",
     path: "/contact",
   },
