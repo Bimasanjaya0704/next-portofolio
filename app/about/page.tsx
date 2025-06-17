@@ -135,10 +135,15 @@ const experience = {
   description:
     "As a dedicated professional in the field, I bring a wealth of experience and expertise to every project. My journey in the industry has equipped me with valuable skills and insights, allowing me to thrive in dynamic environments.",
   items: [
+    { 
+      company: "LG Sinarmas - Karawang", 
+      position: "IT System Engineer", 
+      duration: "May 2025 - Present"
+    }, 
     {
       company: "Formulatrix - Salatiga",
       position: "Junior Software Engineer",
-      duration: "Nov 2024 - Present",
+      duration: "Nov 2024 - May 2025",
     },
     {
       company: "Formulatrix - Salatiga",
