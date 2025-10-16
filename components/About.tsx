@@ -35,6 +35,10 @@ const techList: { name: string; icon: JSX.Element }[] = [
 
 const careerMilestones = [
   {
+    year: 2025,
+    title: "IT System Engineer",
+  },
+  {
     year: 2024,
     title: "Junior Software Engineer",
   },
